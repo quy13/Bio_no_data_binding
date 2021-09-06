@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/general_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4A7ADA"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/nah"
+        android:padding="@dimen/text_padding"
+        app:srcCompat="@drawable/ic_baseline_person" />
+
+    <TextView
+        android:id="@+id/text_view"
+        style="@style/test1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Title"
+        android:textColor="#1A237E"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/hobby_et"
+        style="@style/general_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:autofillHints="@string/auto_fill_hints"
+        android:background="@android:color/transparent"
+        android:gravity="center|center_vertical"
+        android:hint="@string/hobby_hint"
+        android:inputType="textPersonName"
+        android:padding="@dimen/text_padding" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="@string/done"
+        android:onClick="addHobbies"/>
+
+    <TextView
+        android:id="@+id/show_hobbies"
+        style="@style/test1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/scrolling_text_view"
+            style="@style/general_style"
+            android:fontFamily="@font/roboto_slab"
+            android:lineSpacingMultiplier="1.9"
+            android:text="@string/my_bio"
+            android:textColor="#1A237E" />
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>
